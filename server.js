@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-const connectDB = require('./config/db')
+// const connectDB = require('./config/db')
 require('dotenv').config();
 
 const app = express();
 
 // Connect to database
-connectDB();
+// connectDB();
 
 
 // Data Parsing for Forms
