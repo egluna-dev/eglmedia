@@ -1,0 +1,108 @@
+@import './utilities/_config.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $open;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: lighter;
+  letter-spacing: 0;
+  margin: 2rem;
+  color: $offwhite;
+}
+
+.coming-soon {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/landingcover_lighter.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  color: $offwhite;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  font-size: 3rem;
+  color: $offwhite;
+}
+
+#showcase-top {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 5rem;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    align-content: space-between;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      margin: 1rem;
+      color: $steel;
+      // cursor: pointer;
+    }
+
+    // a:hover {
+    //     color: $charcoal;
+    // }
+
+    i {
+      font-size: 1.5rem;
+      // cursor: pointer;
+      position: relative;
+      top: 0.4rem;
+      color: $steel;
+    }
+
+    // i:hover {
+    //     color: $charcoal;
+    // }
+  }
+}
+
+#showcase-downarrow {
+  position: relative;
+  top: 6rem;
+}
+
+.container {
+  height: 100vh;
+  background-color: $fog;
+  display: flex;
+  flex-direction: column;
+  p {
+    width: 50%;
+    font-family: $mongolian;
+  }
+}

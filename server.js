@@ -1,7 +1,11 @@
 const express = require('express');
 const path = require('path');
+const connectDB = require('./config/db')
 
 const app = express();
+
+// Connect to database
+connectDB();
 
 
 // Data Parsing for Forms
@@ -12,9 +16,17 @@ app.use(express.json());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+// Serve static assets
+app.use(express.static('public'));
+app.use('/images', express.static(__dirname + 'public/images'));
+app.use('/javascript', express.static(__dirname + 'public/javascript'));
+app.use('/stylesheets', express.static(__dirname + 'public/stylesheets'));
+app.use('/logos', express.static(__dirname + 'public/logos'));
+
+
 // Homepage Route
 app.get('/', (req, res) => {
-    res.send('This is the home page for EGL Media');
+    res.render('index');
 })
 
 const PORT = process.env.PORT || 5000;
