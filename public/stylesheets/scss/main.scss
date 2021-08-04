@@ -1,4 +1,6 @@
 @import './utilities/_config.scss';
+@import './utilities/utilities.scss';
+@import './utilities/mediaqueries';
 
 * {
   box-sizing: border-box;
@@ -11,7 +13,7 @@ body {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: lighter;
   letter-spacing: 0;
   margin: 2rem;
@@ -42,7 +44,7 @@ h2 {
 .hours,
 .minutes,
 .seconds {
-  font-size: 3rem;
+  font-size: 2rem;
   color: $offwhite;
 }
 
@@ -53,6 +55,11 @@ h2 {
   width: 100%;
   position: relative;
   bottom: 5rem;
+}
+
+#showcase-middle {
+  max-width: 70%;
+  text-align: center;
 }
 
 #navbar {
