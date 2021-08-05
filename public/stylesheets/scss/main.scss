@@ -22,10 +22,6 @@ h2 {
 
 .coming-soon {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-image: url('../../images/landingcover_lighter.jpg');
   background-size: cover;
   background-position: center;
@@ -48,13 +44,21 @@ h2 {
   color: $offwhite;
 }
 
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 #showcase-top {
   display: flex;
   justify-content: space-around;
   align-content: center;
   width: 100%;
   position: relative;
-  bottom: 5rem;
+  bottom: 1rem;
 }
 
 #showcase-middle {

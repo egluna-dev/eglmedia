@@ -1,1 +1,27 @@
- 
+@media only screen and (max-height: 650px) {
+  #showcase-top {
+    position: relative;
+    top: 0.5rem;
+  }
+
+  #content {
+    position: relative;
+    top: 1rem;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  #showcase-top {
+    img {
+      width: 150px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #showcase-top {
+    img {
+      width: 150px;
+    }
+  }
+}
