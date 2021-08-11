@@ -1,0 +1,32 @@
+<% layout('layout/boilerplate') %>
+<section class="coming-soon">
+    <div id="content">
+        <div id="showcase-top">
+            <a href="/"><img src="logos/EGLMedia.svg" alt="EGL Media"></a>
+            <nav id="navbar">
+                <ul>
+                    <li><a class="nav-link">About</a></li>
+                    <li><a class="nav-link">Projects</a></li>
+                    <li><a class="nav-link">Photography</a></li>
+                    <li><a class="nav-link">Blog</a></li>
+                    <li><a class="nav-link">Contact</a></li>
+                    <i class="fa fa-adjust nav-link" aria-hidden="true"></i>
+                </ul>
+            </nav>
+        </div>
+        <div id="showcase-middle">
+            <% for(let post of posts) { %>
+                <a href="/blogs/<%=post._id%>"><h2><%=post.title%></h2></a>
+                <div class="countdown">
+                    <p style='color: white; margin-top: 1rem'><%=post.body%></p>
+                    <div>By:<%=post.author%></div>
+                    <div>Published: <%=post.date%></div>
+                    <div><%=post.readlength%> min read</div>
+                </div>
+            <% } %>
+        </div>
+        <!-- <div class="showcase-bottom">
+            <img id="showcase-downarrow" src="./svg/downarrow.svg" alt="down arrow">
+        </div> -->
+    </div>
+</section>

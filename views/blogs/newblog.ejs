@@ -1,0 +1,56 @@
+<% layout('layout/boilerplate') %>
+<section class="coming-soon">
+    <div id="content">
+        <div id="showcase-top">
+            <a href="/"><img src="/logos/EGLMedia.svg" alt="EGL Media"></a>
+            <nav id="navbar">
+                <ul>
+                    <li><a class="nav-link">About</a></li>
+                    <li><a class="nav-link">Projects</a></li>
+                    <li><a class="nav-link">Photography</a></li>
+                    <li><a class="nav-link">Blog</a></li>
+                    <li><a class="nav-link">Contact</a></li>
+                    <i class="fa fa-adjust nav-link" aria-hidden="true"></i>
+                </ul>
+            </nav>
+        </div>
+        <div id="showcase-middle">
+            <form action="/blogs" method='POST'>
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" id='title' name='title' required>
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" id='author' name='author' required>
+                </div>
+                <div>
+                    <label for="image">Image</label>
+                    <input type="file" id='image' name='image' required>
+                </div>
+                <div>
+                    <label for="date">Date Posted</label>
+                    <input type="date" id='date' name='date' required>
+                </div>
+                <div>
+                    <label for="readlength">Read Length</label>
+                    <input type="number" id='image' name='readlength' required>
+                </div>
+                <div>
+                    <label for="categories">Categories</label>
+                    <input type="text" id='categories' name='categories'>
+                </div>
+                <div>
+                    <label for="text">Blog Content</label>
+                    <input type="text" id='text' name='text' required>
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+        <!-- <div class="showcase-bottom">
+            <img id="showcase-downarrow" src="./svg/downarrow.svg" alt="down arrow">
+        </div> -->
+    </div>
+</section>

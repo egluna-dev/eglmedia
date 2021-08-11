@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 
 
-//  @route     GET api/posts
-//  @desc      Test route
-//  @access    Public
+//  @route  GET api/users
+//  @desc    Test route
+//  @access Public
 router.get('/', (req, res) => {
-    res.send('Posts route')
+    res.render('webdevelopment/webdevmain');
 })
 
 module.exports = router;
