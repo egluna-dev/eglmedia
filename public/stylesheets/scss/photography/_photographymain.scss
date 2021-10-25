@@ -1,0 +1,293 @@
+.main-body {
+  height: auto;
+  min-height: 500px;
+}
+
+.body-content-photography {
+  width: 80%;
+  height: auto;
+  align-items: center;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-weight: 400;
+    margin: 2rem auto 1rem auto;
+  }
+
+  hr {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  margin-top: 2rem;
+  position: relative;
+
+  .photo-container {
+    position: relative;
+  }
+
+  .photo-thumbnail {
+    opacity: 1;
+    transition: all 250ms ease-in-out;
+    backface-visibility: hidden;
+  }
+
+  .middle {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+  }
+
+  .photo-container:hover .photo-thumbnail {
+    opacity: 0.8;
+  }
+
+  .photo-container:hover .middle {
+    opacity: 1;
+    transition-delay: 300ms;
+  }
+
+  .text {
+    font-size: 2.5rem;
+    color: $offwhite;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 80%;
+    margin: 2rem auto;
+    justify-content: center;
+  }
+
+  .people {
+    grid-column: 1/3;
+  }
+}
+
+.photo-grid {
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; /* IE 6-9 */
+    transition: all 250ms ease-in-out;
+  }
+
+  img:hover {
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none;
+  }
+}
+
+.photography-contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+
+  p {
+    text-align: left;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid $steel;
+    margin: 0 0.5rem 0 0.5rem;
+    background-color: $fog;
+    font-family: $open;
+    font-size: 1.25rem;
+    width: 100%;
+    height: 3rem;
+    margin: 0 0 1rem 0;
+    border-radius: 2px;
+  }
+
+  textarea {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  form {
+    button {
+      background-color: $steel;
+      font-family: $open;
+      color: $offwhite;
+      border: none;
+      border-radius: 2px;
+      width: 50%;
+      padding: 0.25rem 0.75rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: all 250ms ease-in-out;
+    }
+
+    button:hover {
+      background-color: $mist;
+    }
+  }
+}
+
+.body-content-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 80%;
+  padding: 5rem auto;
+
+  hr {
+    width: 50%;
+    margin: 0.5rem auto;
+  }
+}
+
+.about-photography {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  width: 80%;
+  img {
+    width: 60%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-info-photography {
+  h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid $charcoal;
+    margin-bottom: 1rem;
+    font-weight: 200;
+    width: 40%;
+  }
+}
+
+.social-link-about {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  a {
+    color: $steel;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+  }
+
+  a:hover {
+    color: $yellow;
+  }
+
+  i {
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+}
+
+.about-photography-description {
+  width: 100%;
+  font-size: 1.25rem;
+  margin: 1rem auto;
+}
+
+.portfolio-links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-links-about {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: $blue;
+  transition: all 250ms ease-in-out;
+  margin: 0.25rem 0;
+}
+
+.portfolio-links-about:hover {
+  color: $yellow;
+}
+
+@media only screen and (min-width: 850px) {
+  .body-content-about {
+    width: 70%;
+  }
+  .about-photography {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img {
+      min-width: 14rem;
+      width: 50%;
+      margin-right: 2rem;
+    }
+  }
+
+  .about-photography-right {
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+}
+
+// Photo Galleries
+.photo-grid-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  line-height: 0;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -moz-column-gap: 0px;
+  column-count: 2;
+  justify-items: center;
+  margin: 3rem auto;
+  column-gap: 1rem;
+  row-gap: 1rem;
+
+  .gallery-img-portrait {
+    opacity: 1 !important;
+  }
+
+  .grid-box {
+    img {
+      width: 100% !important;
+      height: auto !important;
+      box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.2);
+      object-fit: contain;
+      opacity: 0.9;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .photo-grid-gallery {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+
+    .grid-box.wide {
+      grid-column: 1/3;
+    }
+  }
+}

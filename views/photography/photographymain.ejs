@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EGL Photography | Home</title>
-</head>
-<body>
-    <h1>Photography Landing Page</h1>
-</body>
-</html>
+<%- layout('layout/photoboiler') %>
+<main class="main-body">
+    <div class="body-content-photography">
+        <h1>Photography</h1>
+        <hr>
+        <div class="photo-grid">
+            <div class="photo-container landscape">
+                <a href="/photography/travel-landscape" ><img class="photo-thumbnail wide" src="/images/landscape/_DSC5790.jpg" alt=""></a>
+                <div class="middle">
+                    <div class="text">Travel & Landscape</div>
+                </div>
+            </div>
+            <div class="photo-container street">
+                <a href="/photography/streetphotography" ><img class="photo-thumbnail tall" src="/images/street/_DSC6349.jpg" alt=""></a>
+                <div class="middle">
+                    <div class="text">Street</div>
+                </div>
+            </div>
+            <div class="photo-container people">
+                <a href="/photography/people" ><img class="photo-thumbnail tall" src="/images/people/_NCZ3518.jpg" alt=""></a>
+                <div class="middle">
+                    <div class="text">People</div>
+                </div>
+            </div>
+            <!-- <div class="photo-container events">
+                <a href="#" ><img class="photo-thumbnail wide" src="./imgs/portfolio_imgs/color/DSC_0017.jpg" alt=""></a>
+                <div class="middle">
+                    <div class="text">Events</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</main>

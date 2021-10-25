@@ -1,0 +1,24 @@
+<%- layout('layout/photoboiler') %>
+<main class="main-body">
+    <div class="body-content">
+        <h1>Contact</h1>
+        <hr>
+        <p class="photography-contact">For any enquiries regarding photographic services, prints, collaborations, image licensing please get in touch using the form below. For enquiries regarding UI/UX design and/or web development, please get in touch <a class="contact-link" href="#">here.</a>
+        </p>
+        <div class="photography-contact-form">
+            <p style="text-align: left;">* required</p>
+            <form action="/send" method="POST">
+                <div id="form-names">
+                    <input type="text" name="firstname" placeholder="First Name *" required>
+                    <input type="text" name="lastname" placeholder="Last Name">
+                </div>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="subject" placeholder="Subject *" required>
+                <div>
+                    <textarea name="message" id="webdev-contact-message" placeholder="Message *"></textarea>
+                </div>
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+</main>

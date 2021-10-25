@@ -2,22 +2,25 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    post: {
-        type: Schema.Types.ObjectId,
-        ref: 'BlogPost'
+    firstname : {
+        type: String,
+        required: [true, 'Please provide your name']
+    },
+    lastname: {
+        type: String,
+        required: false
     },
     email: {
         type: String,
-        required: [true, 'email required']
+        unique: [true, 'Please provide your email']
     },
     date: {
         type: Date,
-        required: [true, 'date required'],
         default: Date.now
     },
-    likes: {
-        type: Number,
-        required: false
+    text: {
+        type: String,
+        required: [true, 'Comment text required']
     }
 });
 

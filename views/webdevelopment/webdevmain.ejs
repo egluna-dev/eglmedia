@@ -1,31 +1,180 @@
-<%- layout('layout/boilerplate') %>
-<section class="coming-soon">
-    <div id="content">
-        <div id="showcase-top">
-            <a href="/"><img src="/logos/EGLMedia.svg" alt="EGL Media"></a>
-            <nav id="navbar">
-                <ul>
-                    <li><a class="nav-link">About</a></li>
-                    <li><a class="nav-link">Projects</a></li>
-                    <li><a class="nav-link">Photography</a></li>
-                    <li><a class="nav-link">Blog</a></li>
-                    <li><a class="nav-link">Contact</a></li>
-                    <i class="fa fa-adjust nav-link" aria-hidden="true"></i>
-                </ul>
-            </nav>
-        </div>
-        <div id="showcase-middle-1">
-            <h2>Giovanni Luna</h2>
-        </div>
-        <div id="showcase-middle-2">
-            <h2>UI/UX Design, Web Development</h2>
-        </div>
-        <div class="showcase-bottom">
-            <div>
-                <img src="/logos/downarrow.svg" alt="Scroll Down">
+<%- layout('layout/webdevboiler') %>
+<section class="showcase-container webdev">
+    <div id="top-section">
+        <a href="#"><img src="./svg/EGLMedia.svg" alt="EGL Media"></a>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Projects</a></li>
+                <li><a href="#" class="nav-link">Photography</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+                <!-- <li><i class="fa fa-adjust nav-link" aria-hidden="true"></i></li> -->
+            </ul>
+        </nav>
+        <!-- // Hamburger Menu Overlay for Tablet and Mobile -->
+        <div class='menu-btn webdev'>
+            <div class='menu-btn-burger'>
             </div>
-            <a href="/blogs">See Blog Posts</a>
+            <div class='menu'>
+                <div>
+                    <div>
+                        <ul>
+                            <a href="/"><img style="width: 125px; margin-bottom: 2rem;" src="./svg/EGLMedia.svg" alt="EGL Media"></a>
+                            <li><a href="/photography/about">About</a></li>
+                            <li><a href="/webdevelopment">Web Development</a></li>
+                            <li><a href="/photography">Photography</a></li>
+                            <!-- <li><a href="#">Blog</a></li> -->
+                            <li><a href="/photography/contact">Contact</a></li>
+                            <!-- <li><i class="fa fa-adjust nav-link" aria-hidden="true"></i></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-
+    </div>
+    <div id="middle-top">
+        <h1>Giovanni</h1>
+        <h1>Luna</h1>
+    </div>
+    <div id="bottom-section-webdev">
+        <h2>UI/UX Design and Web Development</h2>
+    </div>
+    <div class="showcase-bottom-web">
+        <a href="#web-about"><img src="/svg/downarrow.svg" alt="Scroll Down"></a>
     </div>
 </section>
+<main class="container">
+    <section id="web-about">
+        <div id="about-left">
+            <img src="/images/_NCZ3736.jpg" alt="Giovanni Luna Portrait">
+            <div id="contact-links">
+                <h3>Contact</h3>
+                <div>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-github"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="about-right">
+            <h1>Giovanni Luna</h1>
+            <h2>UI Designer and full stack developer</h2>
+            <p>Hi, I am Giovanni; a developer, UI/UX designer and photographer from Canada currently based in
+                Melbourne,
+                Australia. With a background in engineering and a passion for both design and software development,
+                I
+                take web projects from the design phase through to back end development and everything in between.
+            </p>
+            <p>Focusing on UI design and front end development, I can work with you to design beautiful, clean
+                interfaces with a responsive and dynamic front end.
+            </p>
+            <a href="#project-portfolio">See Portfolio</a>
+        </div>
+    </section>
+
+    <section id="technologies-icons">
+        <h2>Technologies Used</h2>
+        <div id="technologies-row-1">
+            <img id="xd" src="./svg/xd.svg" alt="Adobe Xd">
+            <img src="./svg/ps.svg" alt="Adobe Photoshop">
+            <img src="./svg/ai.svg" alt="Adobe Illustrator">
+            <img src="./svg/sass.svg" alt="Sass">
+            <img src="./svg/python.svg" alt="Python">
+            <img src="./svg/django.svg" alt="Angular">
+        </div>
+        <div id="technologies-row-2">
+            <img src="./svg/html.svg" alt="Adobe Xd">
+            <img src="./svg/css.svg" alt="Adobe Illustrator">
+            <img src="./svg/js.svg" alt="Adobe Illustrator">
+            <img src="./svg/mongodb.svg" alt="Sass">
+            <img src="./svg/node.svg" alt="Sass">
+            <img src="./svg/react.svg" alt="Sass">
+        </div>
+    </section>
+    <hr>
+    <section id="skills-services">
+        <h2>Skills and Services</h2>
+        <p>Offering design and full-stack development, I can work with you to start your project from preliminary
+            concept and design all the way to back-end programming utilizing a wide array of design and development
+            technologies.
+        </p>
+    </section>
+    <section id="services">
+        <div id="ui-design" class="services-section">
+            <div class="services-content">
+                <h3>UI Design</h3>
+                <p>With a preference for minimalist design and style, I will work closely with you to design a
+                    clean, minimalistic yet imaginative and interactive website. Additionally, I provide graphic
+                    design and photography services if your project requires.
+                </p>
+                <p><strong>Adobe XD, Photoshop, Illustrator</strong></p>
+            </div>
+            <div class="services-photo">
+                <img src="/images/vojtech-bruzek-J82GxqnwKSs-unsplash-edited.jpg" alt="UI/UX Design">
+            </div>
+        </div>
+        <div id="frontend" class="services-section">
+            <div class="services-content">
+                <h3>Frontend Development</h3>
+                <p>I use a wide range of technologies to bring your design to life, with React JS serving as the
+                    main front-end framework to build a dynamic and wonderfully responsive interface.
+                </p>
+                <p><strong>HTML5, CSS3, React JS, Sass</strong></p>
+            </div>
+            <div class="services-photo">
+                <img src="images/ferenc-almasi-L8KQIPCODV8-unsplash.jpg" alt="Frontend Development">
+            </div>
+        </div>
+        <div id="backend" class="services-section">
+            <div class="services-content">
+                <h3>Backend Development</h3>
+                <p>Specializing in Node JS, I use JavaScript, Express, and MongoDB as the main drivers for
+                    programming the back-end of your project. Additionally, I am working to learn Python and Django,
+                    as well as Ruby/Ruby on Rails to suit the needs of your organization.
+                </p>
+                <p><strong>Node JS, Express, MongoDB, Python on Django</strong></p>
+            </div>
+            <div class="services-photo">
+                <img src="/images/VSCode.jpg" alt="Backend Development">
+            </div>
+        </div>
+        <div class="down-arrow">
+            <a href="#project-portfolio"><img src="/svg/downarrow_black.svg" alt="Scroll Down"></a>
+        </div>
+    </section>
+    <section id="project-portfolio">
+        <h2>Latest Projects</h2>
+        <div id="projects">
+            <div class="project-thumbnail">
+                <img src="/images/Top.jpg" alt="Equilibrium Remedial">
+                <button class="see-project-btn"><a href="/webdevelopment/equilibrium-remedial">See Project</a></button>
+            </div>
+            <div class="project-thumbnail">
+                <img src="/images/eglmedia-landingpage.jpg" alt="Equilibrium Remedial">
+            </div>
+        </div>
+    </section>
+    <section id="webdev-contact">
+        <h2>Contact</h2>
+        <p>For enquiries regarding UI/UX design and/or web development, please get in touch using the form below and
+            Giovanni will reply as soon as possible. For any enquiries regarding photographic services, prints,
+            collaborations, image licensing please get in touch <a class="contact-link" href="#">here.</a>
+        </p>
+        <div class="webdev-contact-form">
+            <p style="text-align: left;">* required</p>
+            <form action="/send" method="POST">
+                <div id="form-names">
+                    <input type="text" name="firstname" placeholder="First Name *" required>
+                    <input type="text" name="lastname" placeholder="Last Name">
+                </div>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="text" name="subject" placeholder="Subject *" required>
+                <div>
+                    <textarea name="message" id="webdev-contact-message" placeholder="Message *"></textarea>
+                </div>
+                <button>Send</button>
+            </form>
+        </div>
+    </section>
+</main>

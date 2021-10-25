@@ -1,0 +1,139 @@
+.menu-btn {
+  display: flex;
+  position: fixed;
+  top: 3%;
+  right: 12%;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.menu-btn.webdev {
+  top: 12%;
+}
+
+.menu-btn-burger {
+  display: block;
+  position: inherit;
+  width: 45px;
+  height: 6px;
+  background: $charcoal;
+  border-radius: 2px;
+  transition: all 400ms ease-in-out;
+  z-index: 1;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 6px;
+  background: $charcoal;
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-btn-burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(16px);
+}
+
+// Show menu
+.menu-btn.open .menu.open {
+  visibility: visible;
+}
+
+.menu-btn.open .menu.open > div {
+  // transform: scale(1) original;
+  opacity: 1;
+  transform: translateX(0); // Test
+  transition-duration: 0.8s ease-out;
+}
+
+.menu-btn.open .menu.open > div > div {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+// Hamburger to X Animation
+.menu-btn.open .menu-btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+  transform: rotate(45deg) translate(25px, -25px);
+}
+
+.menu-btn.open .menu-btn-burger::after {
+  transform: rotate(-45deg) translate(25px, 25px);
+}
+
+.menu-btn .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn .menu > div {
+  background: $mist;
+  width: 250vw;
+  height: 250vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  // transform: scale(0); original
+  transform: translateX(250px);
+  transition: all 0.8s ease-in-out;
+}
+
+.menu-btn .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 110vh;
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+}
+
+.menu-btn .menu > div > div > ul > li {
+  list-style: none;
+  font-family: $open;
+  color: $offwhite;
+  font-size: 1.75rem;
+  font-weight: 400;
+  padding: 0.7em;
+  z-index: 1;
+  transition: color 250ms ease-in-out;
+}
+
+.menu-btn .menu > div > div > ul > li:hover {
+  color: $steel;
+}
+
+.menu-btn .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+
+.menu-btn .menu > div > div > ul > li > a:hover {
+  color: $steel;
+}
