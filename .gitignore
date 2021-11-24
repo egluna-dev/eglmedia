@@ -1,7 +1,7 @@
 node_modules/
 seeds/
 .vscode/
-public/images/landscape
-public/images/people
-public/images/street
+public/images/landscape/
+public/images/people/
+public/images/street/
 .env
