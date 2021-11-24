@@ -450,7 +450,7 @@ nav.minimal-navbar .nav-link:hover {
   flex-direction: column;
   background-color: #abb8bc;
   height: 65vh;
-  padding-bottom: 1rem 0;
+  padding: 2rem 0;
 }
 
 .project-info p {
@@ -464,10 +464,11 @@ nav.minimal-navbar .nav-link:hover {
   font-family: "Open Sans Condensed", sans-serif;
   color: #f7f7f7;
   border: none;
-  width: 7rem;
-  height: 2rem;
+  width: 10%;
+  height: 3rem;
   border-radius: 2px;
   padding: 0.25rem 0.75rem;
+  margin: 1rem;
   transition: all 250ms ease-in-out;
   cursor: pointer;
 }
