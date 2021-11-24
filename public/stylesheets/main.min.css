@@ -47,7 +47,7 @@
     width: 50%;
   }
   body .project-info {
-    height: 60vh;
+    height: 90vh;
   }
   body .project-info p {
     width: 70%;
@@ -64,7 +64,7 @@
     font-weight: 100;
   }
   body .project-info {
-    height: 50vh;
+    height: 120vh;
   }
   body .project-info p {
     width: 40%;
@@ -164,7 +164,7 @@
     width: 300px;
   }
   main .project-info {
-    height: 45vh;
+    height: 60vh;
   }
   main .project-info p {
     width: 40%;
@@ -449,32 +449,14 @@ nav.minimal-navbar .nav-link:hover {
   align-items: center;
   flex-direction: column;
   background-color: #abb8bc;
-  height: 65vh;
-  padding: 2rem 0;
+  height: 70vh;
+  padding: 3.5rem 0;
 }
 
 .project-info p {
   text-align: center;
   width: 85%;
   margin: 1.5rem auto;
-}
-
-.project-info button {
-  background-color: #586168;
-  font-family: "Open Sans Condensed", sans-serif;
-  color: #f7f7f7;
-  border: none;
-  width: 10%;
-  height: 3rem;
-  border-radius: 2px;
-  padding: 0.25rem 0.75rem;
-  margin: 1rem;
-  transition: all 250ms ease-in-out;
-  cursor: pointer;
-}
-
-.project-info button:hover {
-  background-color: #303537;
 }
 
 .project-info a {
@@ -485,6 +467,24 @@ nav.minimal-navbar .nav-link:hover {
 .project-info i {
   margin-left: 0.25rem;
   text-align: center;
+}
+
+.external-link-btn {
+  background-color: #586168;
+  font-family: "Open Sans Condensed", sans-serif;
+  color: #f7f7f7;
+  border: none;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 2px;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.external-link-btn:hover {
+  background-color: #303537;
 }
 
 .project-main-section {

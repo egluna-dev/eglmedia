@@ -94,31 +94,13 @@
   align-items: center;
   flex-direction: column;
   background-color: $mist;
-  height: 65vh;
-  padding: 2rem 0;
+  height: 70vh;
+  padding: 3.5rem 0;
 
   p {
     text-align: center;
     width: 85%;
     margin: 1.5rem auto;
-  }
-
-  button {
-    background-color: $steel;
-    font-family: $open;
-    color: $offwhite;
-    border: none;
-    width: 10%;
-    height: 3rem;
-    border-radius: 2px;
-    padding: 0.25rem 0.75rem;
-    margin: 1rem;
-    transition: all 250ms ease-in-out;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: $charcoal;
   }
 
   a {
@@ -130,6 +112,24 @@
     margin-left: 0.25rem;
     text-align: center;
   }
+}
+
+.external-link-btn {
+  background-color: $steel;
+  font-family: $open;
+  color: $offwhite;
+  border: none;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 2px;
+  padding: 0.25rem 0.75rem;
+  margin: 1rem;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.external-link-btn:hover {
+  background-color: $charcoal;
 }
 
 .project-main-section {
