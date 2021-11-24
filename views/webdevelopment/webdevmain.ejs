@@ -1,18 +1,19 @@
-<%- layout('layout/webdevboiler') %>
+<%- layout('layout/webdevlayout') %>
 <section class="showcase-container webdev">
     <div id="top-section">
         <a href="#"><img src="./svg/EGLMedia.svg" alt="EGL Media"></a>
         <nav id="navbar">
             <ul>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Projects</a></li>
-                <li><a href="#" class="nav-link">Photography</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+                <!-- <li><a href="#" class="nav-link">About</a></li> -->
+                <li><a href="#project-portfolio" class="nav-link">Projects</a></li>
+                <li><a href="/photography" class="nav-link">Photography</a></li>
+                <li><a href="#webdev-contact" class="nav-link">Contact</a></li>
                 <!-- <li><i class="fa fa-adjust nav-link" aria-hidden="true"></i></li> -->
             </ul>
         </nav>
+        <%- include('../partials/burger') %>
         <!-- // Hamburger Menu Overlay for Tablet and Mobile -->
-        <div class='menu-btn webdev'>
+        <!-- <div class='menu-btn webdev'>
             <div class='menu-btn-burger'>
             </div>
             <div class='menu'>
@@ -22,15 +23,15 @@
                             <a href="/"><img style="width: 125px; margin-bottom: 2rem;" src="./svg/EGLMedia.svg" alt="EGL Media"></a>
                             <li><a href="/photography/about">About</a></li>
                             <li><a href="/webdevelopment">Web Development</a></li>
-                            <li><a href="/photography">Photography</a></li>
+                            <li><a href="/photography">Photography</a></li> -->
                             <!-- <li><a href="#">Blog</a></li> -->
-                            <li><a href="/photography/contact">Contact</a></li>
+                            <!-- <li><a href="/photography/contact">Contact</a></li> -->
                             <!-- <li><i class="fa fa-adjust nav-link" aria-hidden="true"></i></li> -->
-                        </ul>
+                        <!-- </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     <div id="middle-top">
         <h1>Giovanni</h1>
@@ -50,10 +51,10 @@
             <div id="contact-links">
                 <h3>Contact</h3>
                 <div>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-github"></i></a>
-                    <a href="#"><i class="far fa-envelope"></i></a>
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://instagram.com/eglcinephoto" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                    <a href="https://github.com/egluna-dev" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                    <a href="mailto:eglunabusiness@gmail.com"><i class="far fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/e-giovanni-luna/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -120,7 +121,7 @@
                 <p>I use a wide range of technologies to bring your design to life, with React JS serving as the
                     main front-end framework to build a dynamic and wonderfully responsive interface.
                 </p>
-                <p><strong>HTML5, CSS3, React JS, Sass</strong></p>
+                <p><strong>HTML5, CSS3, React JS, Redux, Sass</strong></p>
             </div>
             <div class="services-photo">
                 <img src="images/ferenc-almasi-L8KQIPCODV8-unsplash.jpg" alt="Frontend Development">
@@ -145,25 +146,40 @@
     </section>
     <section id="project-portfolio">
         <h2>Latest Projects</h2>
+        <p class="project-instruction-mobile">Click to view Projects</p>
         <div id="projects">
-            <div class="project-thumbnail">
-                <img src="/images/Top.jpg" alt="Equilibrium Remedial">
-                <button class="see-project-btn"><a href="/webdevelopment/equilibrium-remedial">See Project</a></button>
-            </div>
-            <div class="project-thumbnail">
-                <img src="/images/eglmedia-landingpage.jpg" alt="Equilibrium Remedial">
-            </div>
+            <a href="/webdevelopment/equilibrium-remedial">
+                <div class="project-thumbnail">
+                    <img src="/images/ER_thumbnail.jpg" alt="Equilibrium Remedial">
+                    <div class="image-overlay">
+                        <div class="image-title">Equilibrium Remedial</div>
+                        <p class="image-description">Message Therapy Services</p>
+                        <p class="image-click">View Project</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#!">
+                <div class="project-thumbnail">
+                    <img src="/images/EGL_thumbnail.jpg" alt="EGL Media Homepage">
+                    <div class="image-overlay">
+                        <div class="image-title">EGL Media</div>
+                        <p class='image-description'>Full Stack development, UI Design & Photography</p>
+                        <p class="image-click">View Project</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
     <section id="webdev-contact">
         <h2>Contact</h2>
+        <%- include('../partials/flash') %>
         <p>For enquiries regarding UI/UX design and/or web development, please get in touch using the form below and
             Giovanni will reply as soon as possible. For any enquiries regarding photographic services, prints,
-            collaborations, image licensing please get in touch <a class="contact-link" href="#">here.</a>
+            collaborations, image licensing please get in touch <a class="contact-link" href="/photography/contact">here.</a>
         </p>
         <div class="webdev-contact-form">
             <p style="text-align: left;">* required</p>
-            <form action="/send" method="POST">
+            <form action="/webdevelopment/send" method="POST">
                 <div id="form-names">
                     <input type="text" name="firstname" placeholder="First Name *" required>
                     <input type="text" name="lastname" placeholder="Last Name">

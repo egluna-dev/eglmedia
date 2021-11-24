@@ -1,7 +1,11 @@
-<% layout('layout/webdevboiler') %>
+<% layout('layout/photolayout') %>
 <div class='alert'>
-    <h4>Error!</h4>
-    <p><%=err.message%></p>
-    <hr>
-    <p><%=err.stack%></p>
+    <h4><%= err.message%></h4>
+    <p><span><%= err.statusCode %></span></p>
+    <p>The page you are looking for could not be found.</p>
+    <div class="return-links">
+        <a href="/">Back Home</a>
+        <a href="/photography">Back to Photography</a>
+    </div>
+    
 </div>

@@ -261,7 +261,7 @@
   -moz-column-gap: 0px;
   column-count: 2;
   justify-items: center;
-  margin: 3rem auto;
+  margin: 2rem auto;
   column-gap: 1rem;
   row-gap: 1rem;
 
@@ -277,6 +277,23 @@
       object-fit: contain;
       opacity: 0.9;
     }
+  }
+}
+
+.back-home {
+  display: flex;
+  justify-content: center;
+
+  a {
+    margin: 2rem 0 1rem 0;
+    text-decoration: none;
+    color: $blue;
+    transition: all 250ms ease-in-out;
+    font-size: 1.25rem;
+  }
+
+  a:hover {
+    color: $yellow;
   }
 }
 

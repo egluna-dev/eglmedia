@@ -9,6 +9,7 @@ const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy
 const User = require('./models/User');
+const getYear = require('./utilities/getYear');
 require('dotenv').config();
 
 
@@ -77,14 +78,16 @@ app.get('/', (req, res) => {
 //  @desc   Legal privacy policy content
 //  @access Public
 app.get('/privacypolicy', (req, res) => {
-    res.render('legal/privacypolicy', { title: 'EGL Media | Privacy Policy'});
+    const currentYear = getYear();
+    res.render('legal/privacypolicy', { title: 'Privacy Policy', year: currentYear });
 });
 
 //  @route  GET /privacypolicy
 //  @desc   Legal privacy policy content
 //  @access Public
 app.get('/termsandconditions', (req, res) => {
-    res.render('legal/termsandconditions', { title: 'EGL Media | Terms & Conditions'});
+    const currentYear = getYear();
+    res.render('legal/termsandconditions', { title: 'Terms & Conditions', year: currentYear});
 });
 
 // Define routes
@@ -101,9 +104,10 @@ app.all('*', (req, res, next) => {
 
 app.use((err, req, res, next) => {
     const { statusCode = 500, message = 'Something went wrong' } = err;
-    if(!err.message) err.message = 'It looks like something went wrong'
-    res.status(statusCode).render('error', { err });
-})
+    const currentYear = getYear();
+    if(!err.message) err.message = 'It looks like something went wrong';
+    res.status(statusCode).render('error', { err, title: 'Error', year: currentYear, statusCode });
+});
 
 
 const PORT = process.env.PORT || 5000;

@@ -67,29 +67,6 @@
         width: 70%;
       }
     }
-
-    #projects {
-      img {
-        width: 80%;
-        height: auto;
-        max-height: 500px;
-        margin: 2rem auto;
-      }
-
-      .project-thumbnail:nth-of-type(1)::after,
-      .project-thumbnail:nth-of-type(1):hover::after,
-      .project-thumbnail:nth-of-type(2):hover::after {
-        bottom: 50%;
-        left: 40%;
-        font-size: 2rem;
-      }
-
-      .project-thumbnail:nth-of-type(2)::after {
-        bottom: 50%;
-        left: 40%;
-        font-size: 2rem;
-      }
-    }
   }
 }
 
@@ -203,6 +180,16 @@
         ul {
           width: 55%;
         }
+      }
+    }
+
+    .project-instruction-mobile {
+      display: none;
+    }
+
+    #projects {
+      .project-thumbnail {
+        width: 50%;
       }
     }
   }

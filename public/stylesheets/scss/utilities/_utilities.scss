@@ -118,3 +118,17 @@ nav.minimal-navbar {
     height: auto;
   }
 }
+
+.success-flash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  color: $charcoal;
+  background-color: $yellow;
+  width: 50%;
+  font-size: 1.25rem;
+  border-radius: 2px;
+  height: 3rem;
+  padding: 1rem auto;
+}

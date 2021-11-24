@@ -3,32 +3,42 @@ const router = express.Router({ mergeParams: true });
 const nodemailer = require("nodemailer");
 const emailAuth = process.env.EMAIL_AUTH
 
+const getYear = () => {
+    const date = new Date;
+    const currentYear = date.getFullYear();
+    return currentYear;
+}
+
 //  @route      GET /photography
 //  @desc       Photography home page
 //  @access     Public
 router.get('/', (req, res) => {
-    res.render('photography/photographymain', { title: null });
+    const currentYear = getYear();
+    res.render('photography/photographymain', { title: 'Photography | Home', year: currentYear });
 });
 
 //  @route      GET /photography/travel-landscape
 //  @desc       Photography home page
 //  @access     Public
 router.get('/travel-landscape', (req, res) => {
-    res.render('photography/landscape', { title: 'Photography | Landscape'});
+    const currentYear = getYear();
+    res.render('photography/landscape', { title: 'Photography | Landscape', year: currentYear });
 });
 
 //  @route      GET /photography/streetphotography
 //  @desc       Street photography gallery
 //  @access     Public
 router.get('/streetphotography', (req, res) => {
-    res.render('photography/street', { title: 'Photography | Street'});
+    const currentYear = getYear();
+    res.render('photography/street', { title: 'Photography | Street', year: currentYear });
 });
 
 //  @route      GET /photography/portraits
 //  @desc       Portrait photography gallery
 //  @access     Public
 router.get('/people', (req, res) => {
-    res.render('photography/people', { title: 'Photography | People'});
+    const currentYear = getYear();
+    res.render('photography/people', { title: 'Photography | People', year: currentYear });
 });
 
 //  @route      GET /photography/events
@@ -42,14 +52,16 @@ router.get('/people', (req, res) => {
 //  @desc       Photography about page
 //  @access     Public
 router.get('/about', (req, res) => {
-    res.render('photography/about', { title: 'Photography | About'});
+    const currentYear = getYear();
+    res.render('photography/about', { title: 'Photography | About', year: currentYear });
 });
 
 //  @route      GET /photography/contact
 //  @desc       Contact form for photography
 //  @access     Public
 router.get('/contact', (req, res) => {
-    res.render('photography/contact', { title: 'Photography | Contact'});
+    const currentYear = getYear();
+    res.render('photography/contact', { title: 'Photography | Contact', year: currentYear});
 });
 
 //  @route      POST /photography/send
@@ -60,16 +72,13 @@ router.post('/send', (req, res) => {
     <p>You have a new contact request.</p>
     <h3> Contact Details </h3>
     <ul>
-        <li>First Name: ${req.body.contact.firstname}</li>
-        <li>Last Name: ${req.body.contact.lastname}</li>
-        <li>Subject: ${req.body.contact.subject}</li>
+        <li>First Name: ${req.body.firstname}</li>
+        <li>Last Name: ${req.body.lastname}</li>
+        <li>Subject: ${req.body.subject}</li>
     </ul>
     <h3>Message</h3>
-    <p 
-    style=
-    'color: red; 
-    background-color: pink;'>
-        ${req.body.contact.message}
+    <p>
+        ${req.body.message}
     </p>
     `
 

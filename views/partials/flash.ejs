@@ -1,11 +1,11 @@
 <% if(success && success.length) { %>
-    <div style='background-color: #7CA5A7; border: 2px solid black; padding: 0.5rem; align-items: center;'>
+    <div class="success-flash">
         <%= success %>
     </div>
 <% } %>
 
 <% if(error && error.length) { %>
-    <div style='background-color: #B76662; border: 2px solid black'>
+    <div class="error-flash">
         <%= error %>
     </div>
 <% } %>

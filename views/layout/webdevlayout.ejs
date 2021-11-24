@@ -31,7 +31,6 @@
     </script>
 
     <main>
-        <%- include('../partials/flash') %>
         <%- body %>
     </main>
     <%- include('../partials/footer') %>
@@ -46,7 +45,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             window.setTimeout(() => {
                 document.body.className = '';
-            }, 1500);
+            }, 1000);
         });
     </script>
     <script src="/javascript/burger.js"></script>

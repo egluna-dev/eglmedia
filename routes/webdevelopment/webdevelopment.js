@@ -1,21 +1,24 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const emailAuth = process.env.EMAIL_AUTH
+const emailAuth = process.env.EMAIL_AUTH;
+const getYear = require('../../utilities/getYear');
 
 
 //  @route  GET /webdevelopment
 //  @desc    Main page for web development and design
 //  @access Public
 router.get('/', (req, res) => {
-    res.render('webdevelopment/webdevmain', { title: "Web Development" });
+    const currentYear = getYear();
+    res.render('webdevelopment/webdevmain', { title: "Web Development", year: currentYear });
 });
 
 //  @route  GET /webdevelopment/:equilibriumremedial
 //  @desc   Showcase page for equilibrium remedial
 //  @access Public
-router.get('/equilibrium-remedial', async (req, res) => {
-    res.render('webdevelopment/equilibriumremedial', { title: "Equilibrium Remedial" });
+router.get('/equilibrium-remedial', (req, res) => {
+    const currentYear = getYear();
+    res.render('webdevelopment/equilibriumremedial', { title: "Equilibrium Remedial", year: currentYear });
 });
 
 //  @route  POST /webdevelopment/contact
@@ -26,16 +29,13 @@ router.post('/send', (req, res) => {
     <p>You have a new contact request.</p>
     <h3> Contact Details </h3>
     <ul>
-        <li>First Name: ${req.body.contact.firstname}</li>
-        <li>Last Name: ${req.body.contact.lastname}</li>
-        <li>Subject: ${req.body.contact.subject}</li>
+        <li>First Name: ${req.body.firstname}</li>
+        <li>Last Name: ${req.body.lastname}</li>
+        <li>Subject: ${req.body.subject}</li>
     </ul>
     <h3>Message</h3>
-    <p 
-    style=
-    'color: red; 
-    background-color: pink;'>
-        ${req.body.contact.message}
+    <p>
+        ${req.body.message}
     </p>
     `
 
@@ -65,15 +65,11 @@ router.post('/send', (req, res) => {
         });
 
         req.flash('success', 'Email sent successfully!');
-        res.redirect('/webdevelopment')
+        res.redirect('/webdevelopment#webdev-contact')
       
         console.log("Message sent: %s", info.messageId);
     }
     main().catch(console.error);
 })
-
-
-
-
 
 module.exports = router;
