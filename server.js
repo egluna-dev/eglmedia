@@ -16,7 +16,7 @@ require('dotenv').config();
 const app = express();
 
 // Connect to database
-connectDB();
+// connectDB();
 
 // Express Session Config
 const sessionSecret = process.env.SESSION_SECRET;
@@ -108,7 +108,6 @@ app.use((err, req, res, next) => {
     if(!err.message) err.message = 'It looks like something went wrong';
     res.status(statusCode).render('error', { err, title: 'Error', year: currentYear, statusCode });
 });
-
 
 const PORT = process.env.PORT || 5000;
 
