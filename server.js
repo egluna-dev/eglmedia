@@ -18,20 +18,6 @@ const app = express();
 // Connect to database
 // connectDB();
 
-// Express Session Config
-const sessionSecret = process.env.SESSION_SECRET;
-const sessionConfig = { 
-    secret: sessionSecret, 
-    resave: false, 
-    saveUninitialized: true ,
-    cookie: {
-        httpOnly: true,
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        maxAge: 1000 * 60 * 60 * 24 * 7
-    }
-}
-app.use(session(sessionConfig));
-
 // Flash middleware
 app.use(flash());
 app.use((req, res, next) => {
