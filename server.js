@@ -20,12 +20,12 @@ const app = express();
 connectDB();
 
 // Express Session Config
-const sessionSecret = process.env.SESSION_SECRET;
+const secret = process.env.SESSION_SECRET || 'super secret secret';
 const dbUrl = process.env.MONGO_URI;
 
 const store = MongoDBStore.create({
     mongoUrl: dbUrl,
-    secret: sessionSecret,
+    secret,
     touchAfter: 24 * 60 * 60
 });
 
@@ -36,7 +36,7 @@ store.on('error', function(e) {
 const sessionConfig = {
     store,
     name: 'session',
-    secret: sessionSecret, 
+    secret, 
     resave: false, 
     saveUninitialized: true ,
     cookie: {
