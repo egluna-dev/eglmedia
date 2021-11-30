@@ -10,13 +10,43 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy
 const User = require('./models/User');
 const getYear = require('./utilities/getYear');
-require('dotenv').config();
 
+const MongoDBStore = require('connect-mongo');
+require('dotenv').config();
 
 const app = express();
 
 // Connect to database
-// connectDB();
+connectDB();
+
+// Express Session Config
+const sessionSecret = process.env.SESSION_SECRET;
+const dbUrl = process.env.MONGO_URI;
+
+const store = MongoDBStore.create({
+    mongoUrl: dbUrl,
+    secret: sessionSecret,
+    touchAfter: 24 * 60 * 60
+});
+
+store.on('error', function(e) {
+    console.log("CONNECTTION ERROR!", e)
+});
+
+const sessionConfig = {
+    store,
+    name: 'session',
+    secret: sessionSecret, 
+    resave: false, 
+    saveUninitialized: true ,
+    cookie: {
+        httpOnly: true,
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
+    }
+}
+
+app.use(session(sessionConfig));
 
 // Flash middleware
 app.use(flash());
