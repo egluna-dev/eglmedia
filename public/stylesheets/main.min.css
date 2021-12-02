@@ -1,4 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/cb8d4d30de89efdc96a98761ede26d3d?family=Mongolian+Baiti);
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Space+Grotesk:wght@300&display=swap");
 @media only screen and (min-width: 425px) {
@@ -8,7 +7,7 @@
     font-weight: 100;
   }
   body .project-main-section {
-    height: 1900px;
+    height: auto;
   }
   body .project-pallette {
     height: 650px;
@@ -47,7 +46,7 @@
     width: 50%;
   }
   body .project-info {
-    height: 90vh;
+    height: 70vh;
   }
   body .project-info p {
     width: 70%;
@@ -64,7 +63,7 @@
     font-weight: 100;
   }
   body .project-info {
-    height: 120vh;
+    height: 70vh;
   }
   body .project-info p {
     width: 40%;
@@ -164,7 +163,7 @@
     width: 300px;
   }
   main .project-info {
-    height: 60vh;
+    height: 50vh;
   }
   main .project-info p {
     width: 40%;
@@ -360,6 +359,7 @@ nav.minimal-navbar .nav-link:hover {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -493,7 +493,6 @@ nav.minimal-navbar .nav-link:hover {
   justify-content: flex-start;
   align-items: center;
   height: auto;
-  padding-top: 3rem;
   width: 100%;
 }
 
@@ -502,7 +501,8 @@ nav.minimal-navbar .nav-link:hover {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 600px;
+  margin: 3rem 0;
+  height: auto;
   width: 85%;
 }
 
@@ -511,6 +511,7 @@ nav.minimal-navbar .nav-link:hover {
   flex-direction: column-reverse;
   justify-content: space-evenly;
   margin: 2rem auto;
+  height: auto;
 }
 
 .project-branding .branding-info img {
@@ -520,6 +521,7 @@ nav.minimal-navbar .nav-link:hover {
 
 .project-branding .branding-info p {
   text-align: center;
+  font-size: 1rem;
 }
 
 .project-branding .branding-info h3 {
@@ -1124,9 +1126,14 @@ body.fade {
   justify-content: space-evenly;
   align-items: center;
   background-image: url(../../images/landingcover_lighter.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+.showcase-container.webdev {
+  height: 100vh;
 }
 
 #top-section {

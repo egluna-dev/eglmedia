@@ -30,7 +30,7 @@ const store = MongoDBStore.create({
 });
 
 store.on('error', function(e) {
-    console.log("CONNECTTION ERROR!", e)
+    console.log("CONNECTION ERROR!", e)
 });
 
 const sessionConfig = {
@@ -59,11 +59,11 @@ app.use((req, res, next) => {
 // ^ End of flash middleware
 
 // Passport config
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 // Data Parsing for Forms
 app.use(express.urlencoded({ extended: true }));
@@ -109,10 +109,10 @@ app.get('/termsandconditions', (req, res) => {
 // Define routes
 const webdevelopmentRouter = require('./routes/webdevelopment/webdevelopment.js');
 const photographyRouter = require('./routes/photography/photography');
-const authRouter = require('./routes/auth');
+// const authRouter = require('./routes/auth');
 app.use('/webdevelopment', webdevelopmentRouter);
 app.use('/photography', photographyRouter);
-app.use('/', authRouter);
+// app.use('/', authRouter);
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page not found', 404))
