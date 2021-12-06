@@ -192,6 +192,16 @@
         width: 50%;
       }
     }
+
+    .photo-grid {
+      .middle {
+        opacity: 0;
+      }
+
+      .text {
+        font-size: 2rem;
+      }
+    }
   }
 }
 

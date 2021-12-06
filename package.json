@@ -23,6 +23,7 @@
   "author": "Edward Giovanni Luna",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "config": "^3.3.6",
     "connect-flash": "^0.1.1",
@@ -34,6 +35,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "express-validator": "^6.12.1",
+    "fs": "0.0.1-security",
     "joi": "^17.4.2",
     "jsdom": "^16.7.0",
     "jsonwebtoken": "^8.5.1",

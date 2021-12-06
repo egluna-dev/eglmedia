@@ -144,6 +144,12 @@
   body #projects .project-thumbnail {
     width: 50%;
   }
+  body .photo-grid .middle {
+    opacity: 0;
+  }
+  body .photo-grid .text {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -679,7 +685,15 @@ nav.minimal-navbar .nav-link:hover {
 .body-content-photography h1 {
   text-align: center;
   font-weight: 400;
-  margin: 2rem auto 1rem auto;
+  margin: 3rem auto 1.5rem auto;
+}
+
+.body-content-photography .collections {
+  width: 25%;
+  margin: 2rem auto;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #303537;
 }
 
 .body-content-photography hr {
@@ -687,10 +701,16 @@ nav.minimal-navbar .nav-link:hover {
   margin: 0 auto;
 }
 
+.body-content-photography .photography-title {
+  height: 10vh;
+  width: 100%;
+}
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  margin-top: 2rem;
+  gap: 0.75rem;
+  margin-top: 5rem;
   position: relative;
 }
 
@@ -708,7 +728,7 @@ nav.minimal-navbar .nav-link:hover {
   position: absolute;
   top: 10%;
   left: 10%;
-  opacity: 0;
+  opacity: 1;
   transition: all 250ms ease-in-out;
 }
 
@@ -722,9 +742,9 @@ nav.minimal-navbar .nav-link:hover {
 }
 
 .photo-grid .text {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: #f7f7f7;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 @media only screen and (min-width: 600px) {
@@ -1537,7 +1557,7 @@ nav ul i:hover {
   background: rgba(48, 53, 55, 0.75);
   border-radius: 5px;
   color: #f7f7f7;
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1552,7 +1572,7 @@ nav ul i:hover {
 }
 
 #projects .project-thumbnail .image-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 

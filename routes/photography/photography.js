@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const nodemailer = require("nodemailer");
-const emailAuth = process.env.EMAIL_AUTH
+const catchAsync = require("../../utilities/catchAsync");
+const emailAuth = process.env.EMAIL_AUTH;
 
 const getYear = () => {
     const date = new Date;
@@ -33,20 +34,53 @@ router.get('/streetphotography', (req, res) => {
     res.render('photography/street', { title: 'Photography | Street', year: currentYear, success: null });
 });
 
-//  @route      GET /photography/portraits
+//  @route      GET /photography/australia
 //  @desc       Portrait photography gallery
 //  @access     Public
-router.get('/people', (req, res) => {
+router.get('/australia', (req, res) => {
     const currentYear = getYear();
-    res.render('photography/people', { title: 'Photography | People', year: currentYear, success: null });
+    res.render('photography/australia', { title: 'Photography | Australia', year: currentYear, success: null });
 });
 
-//  @route      GET /photography/events
-//  @desc       Event photography gallery
+//  @route      GET /photography/canada
+//  @desc       Portrait photography gallery
 //  @access     Public
-// router.get('/events', (req, res) => {
-//     res.render('photography/events');
-// });
+router.get('/canada', (req, res) => {
+    const currentYear = getYear();
+    res.render('photography/canada', { title: 'Photography | Canada', year: currentYear, success: null });
+});
+
+//  @route      GET /photography/myanmar
+//  @desc       Portrait photography gallery
+//  @access     Public
+router.get('/myanmar', (req, res) => {
+    const currentYear = getYear();
+    res.render('photography/myanmar', { title: 'Photography | Myanmar', year: currentYear, success: null });
+});
+
+//  @route      GET /photography/gippsland
+//  @desc       Portrait photography gallery
+//  @access     Public
+router.get('/gippsland', (req, res) => {
+    const currentYear = getYear();
+    res.render('photography/gippsland', { title: 'Photography | South Gippsland', year: currentYear, success: null });
+});
+
+//  @route      GET /photography/vietnam
+//  @desc       Portrait photography gallery
+//  @access     Public
+router.get('/vietnam', (req, res) => {
+    const currentYear = getYear();
+    res.render('photography/vietnam', { title: 'Photography | Vietnam', year: currentYear, success: null });
+});
+
+//  @route      GET /photography/manila
+//  @desc       Portrait photography gallery
+//  @access     Public
+router.get('/manila', (req, res) => {
+    const currentYear = getYear();
+    res.render('photography/manila', { title: 'Photography | Manila', year: currentYear, success: null });
+});
 
 //  @route      GET /photography/about
 //  @desc       Photography about page

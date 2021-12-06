@@ -12,19 +12,33 @@
   h1 {
     text-align: center;
     font-weight: 400;
-    margin: 2rem auto 1rem auto;
+    margin: 3rem auto 1.5rem auto;
+  }
+
+  .collections {
+    width: 25%;
+    margin: 2rem auto;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $charcoal;
   }
 
   hr {
     width: 50%;
     margin: 0 auto;
   }
+
+  .photography-title {
+    height: 10vh;
+    width: 100%;
+  }
 }
 
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  margin-top: 2rem;
+  gap: 0.75rem;
+  margin-top: 5rem;
   position: relative;
 
   .photo-container {
@@ -41,7 +55,7 @@
     position: absolute;
     top: 10%;
     left: 10%;
-    opacity: 0;
+    opacity: 1;
     transition: all 250ms ease-in-out;
   }
 
@@ -55,9 +69,9 @@
   }
 
   .text {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     color: $offwhite;
-    opacity: 0.8;
+    opacity: 0.75;
   }
 }
 
