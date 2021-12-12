@@ -333,16 +333,22 @@ nav.minimal-navbar .nav-link:hover {
 
 .to-top-icon {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: 2rem auto;
+  margin: 1rem auto;
+  height: 30vh;
 }
 
 .to-top-icon a {
   text-decoration: none;
+  transition: all 250ms ease-in-out;
   color: #303537;
+  border: 3px solid #303537;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
 }
 
 .to-top-icon img {
@@ -676,7 +682,7 @@ nav.minimal-navbar .nav-link:hover {
 }
 
 .body-content-photography {
-  width: 80%;
+  width: 100%;
   height: auto;
   align-items: center;
   margin: 0 auto;
@@ -709,7 +715,7 @@ nav.minimal-navbar .nav-link:hover {
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  gap: 0.75rem;
+  gap: 0.5rem;
   margin-top: 5rem;
   position: relative;
 }
@@ -757,6 +763,12 @@ nav.minimal-navbar .nav-link:hover {
   }
   .people {
     grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .body-content-photography {
+    width: 80%;
   }
 }
 
@@ -975,8 +987,8 @@ nav.minimal-navbar .nav-link:hover {
 @media only screen and (min-width: 768px) {
   .photo-grid-gallery {
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 1.75rem;
+    row-gap: 1.75rem;
   }
   .photo-grid-gallery .grid-box.wide {
     grid-column: 1/3;

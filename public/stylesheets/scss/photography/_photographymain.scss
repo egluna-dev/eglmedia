@@ -4,7 +4,7 @@
 }
 
 .body-content-photography {
-  width: 80%;
+  width: 100%;
   height: auto;
   align-items: center;
   margin: 0 auto;
@@ -37,7 +37,7 @@
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 1fr);
-  gap: 0.75rem;
+  gap: 0.5rem;
   margin-top: 5rem;
   position: relative;
 
@@ -86,6 +86,12 @@
 
   .people {
     grid-column: 1/3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .body-content-photography {
+    width: 80%;
   }
 }
 
@@ -314,8 +320,8 @@
 @media only screen and (min-width: 768px) {
   .photo-grid-gallery {
     grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 1.75rem;
+    row-gap: 1.75rem;
 
     .grid-box.wide {
       grid-column: 1/3;
