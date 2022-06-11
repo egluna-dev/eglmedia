@@ -2,3 +2,4 @@ node_modules/
 seeds/
 .vscode/
 .env
+.cert/
