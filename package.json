@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "EGL Media Professional Portfolio Site",
   "engines": {
-    "node": "17.x"
+    "node": "17.x",
+    "npm": "8.x"
   },
   "main": "server.js",
   "scripts": {
