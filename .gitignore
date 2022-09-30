@@ -3,3 +3,4 @@ seeds/
 .vscode/
 .env
 cert/
+config/
