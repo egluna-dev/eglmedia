@@ -1,9 +1,10 @@
 import os
+from check_dimensions import get_aspect_ratio
 
 # Enter path and folder/category name and then run script to rename files
 # in a sequential order
-path = "C:\\Users\\username\\Desktop\\folder_name"
-folder = ''
+path = "C:\\Users\\eglun\\Desktop\\gippsland_copy"
+folder = 'Gippsland'
 
 
 def rename_folder_files(file_path, folder_name):
@@ -14,7 +15,9 @@ def rename_folder_files(file_path, folder_name):
         file_name, file_ext = os.path.splitext(file)
         file_name = f"{folder_name}{str(count + 1)}"
 
-        new_name = f'{file_name}{file_ext}'
+        orientation = get_aspect_ratio(file)
+
+        new_name = f'{file_name}{file_ext}_{orientation}'
         os.rename(file, new_name)
 
 
