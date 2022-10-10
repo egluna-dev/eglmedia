@@ -1,5 +1,6 @@
 from PIL import Image
 from PIL.ExifTags import TAGS
+import os
 
 
 def get_aspect_ratio(image_path):
