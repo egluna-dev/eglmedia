@@ -9,7 +9,6 @@ root_path = "C:\\Users\eglun\Documents\\2021\\professionalportfolio\eglmedia\\ba
 def rename_folder_files(file_path):
     for subdir, dirs, files in os.walk(file_path):
         collection_name = subdir.split('\\')[-1]
-        # print(subdir)
         if not files:
             pass
         else:

@@ -6,9 +6,9 @@ const ExpressError = require('./utilities/ExpressError');
 const ejsMate = require('ejs-mate');
 const flash = require('connect-flash');
 const session = require('express-session');
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy
-const User = require('./models/User');
+// const passport = require('passport');
+// const LocalStrategy = require('passport-local').Strategy
+// const User = require('./models/User');
 const getYear = require('./utilities/getYear');
 
 const MongoDBStore = require('connect-mongo');

@@ -352,7 +352,7 @@ nav.minimal-navbar .nav-link:hover {
 }
 
 .to-top-icon img {
-  width: 2rem;
+  width: 1.5rem;
   height: auto;
 }
 
@@ -1161,7 +1161,7 @@ body.fade {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-image: url(../../images/landingcover_lighter.jpg);
+  background-image: url(../../images/thumbnails/landingcover_lighter.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
