@@ -1,10 +1,9 @@
-from concurrent.futures import process
 import os
 from check_dimensions import get_aspect_ratio
 
 # Enter path and folder/category name and then run script to rename files
 # in a sequential order
-root_path = process.env.PORTFOLIO_IMAGES_PATH
+root_path = None  # PORTFOLIO_IMAGES_PATH env var
 
 
 def rename_folder_files(file_path):
